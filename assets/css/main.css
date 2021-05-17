@@ -3368,22 +3368,23 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
+		display: -moz-block;
+		display: -webkit-block;
+		display: -ms-block;
+		display: block;
 		background-color: #0000;
 		cursor: default;
 		padding: 1.75em 2em;
 	}
 
+
 		#header > .title {
 			border: 0;
-			color: #ffffff;
 			display: block;
 			font-size: 1.25em;
 			font-weight: bold;
 		}
+
 
 		#header > nav {
 			-moz-flex: 1;
@@ -3430,8 +3431,15 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#header {
+                display: block;
 				padding: 1em 2em;
 			}
+            #header .title {
+					display: block
+                    font-size: 1.25em;
+					padding: 1em 0;
+				}
+          
 
 		}
 
@@ -3444,7 +3452,8 @@ input, select, textarea {
 			}
 
 				#header .title {
-					font-size: 1.25em;
+					display: block
+                    font-size: 1.25em;
 					padding: 1em 0;
 				}
 
@@ -3751,6 +3760,8 @@ input, select, textarea {
 			text-decoration: none;
 			text-transform: uppercase;
 		}
+        
+
 
 			#sidebar nav a:before, #sidebar nav a:after {
 				border-radius: 0.2em;
@@ -3823,10 +3834,13 @@ input, select, textarea {
 					-moz-align-items: -moz-stretch;
 					-webkit-align-items: -webkit-stretch;
 					-ms-align-items: -ms-stretch;
-					align-items: stretch;
+					align-items: center;
 					height: inherit;
 					line-height: inherit;
 				}
+            #sidebar > .inner div{
+               display: none;
+            }
 
 				#sidebar nav {
 					height: inherit;
@@ -3881,17 +3895,28 @@ input, select, textarea {
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 	}
+#intro > .inner div{
+            display: none;
+                
+            }
+  
 
 		#intro p {
 			font-size: 1.25em;
 		}
+
+            
 
 			@media screen and (max-width: 980px) {
 
 				#intro p br {
 					display: none;
 				}
-
+                #intro > .inner div{
+                    display: block;
+                  
+                }
+        
 			}
 
 			@media screen and (max-width: 736px) {
@@ -3899,13 +3924,26 @@ input, select, textarea {
 				#intro p {
 					font-size: 1em;
 				}
+                #intro > .inner div{
+            display: block;
+            
+            }
+        
 
 			}
+
+     
+
 
 		@media screen and (max-width: 1280px) {
 
 			#intro {
 				background-attachment: scroll;
 			}
+            #intro > .inner div{
+            display: block;
+             
+            }
+
 
 		}
