@@ -3428,8 +3428,25 @@ input, select, textarea {
 							color: #ffffff;
 						}
 
+        @media screen and (min-width: 1256px) {
+			
+			#navi{
+                display: none;
+				padding: 1em 2em;
+				
+			}
+            #navi .title {
+					display: none;
+                    font-size: 1.25em;
+					padding: 1em 0;
+				}
+          
+
+		}
+
 		@media screen and (max-width: 736px) {
 
+			
 			#header {
                 display: block;
 				padding: 1em 2em;
